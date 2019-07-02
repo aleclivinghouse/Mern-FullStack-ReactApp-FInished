@@ -11,6 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // DB Config:
+const path = require(“path”); app.use(express.static(path.join(__dirname, “client/build”)))
 const db = require("./config/keys").mongoURI;
 
 // Routes:
